@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>宵狐堂</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="shop-container">
+    <!-- 背景 -->
+    <img src="images/shop-bg.png" alt="店の背景" class="shop-bg">
+
+    <!-- 店主（GIF）＋机 -->
+    <div class="shopkeeper-area" id="shopkeeper">
+      <img src="images/shopkeeper.gif" alt="店主" class="shopkeeper-gif">
+    </div>
+
+    <!-- 机の上の商品（1つ） -->
+    <div class="item product" id="product" data-link="detail-product.html">
+      <img src="images/product.png" alt="商品">
+    </div>
+
+    <!-- 浮かぶ魂（2つ） -->
+    <div class="item soul soul1" id="soul1" data-link="detail-soul1.html">
+      <img src="images/soul1.png" alt="魂1">
+    </div>
+
+    <div class="item soul soul2" id="soul2" data-link="detail-soul2.html">
+      <img src="images/soul2.png" alt="魂2">
+    </div>
+  </div>
+
+  <!-- 台詞ボックス -->
+  <div class="dialogue-box" id="dialogueBox">
+    <div class="dialogue-text" id="dialogueText"></div>
+    <div class="choices" id="choices" style="display: none;">
+      <button class="choice-btn" data-choice="want">* あなたの音源がほしい</button>
+      <button class="choice-btn" data-choice="chat">* 雑談</button>
+      <button class="choice-btn" data-choice="kiyaku">* 利用規約</button>
+    </div>
+    <div class="continue-hint" id="continueHint">▼</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

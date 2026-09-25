@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>魂1の音源 - 詳細</title>
+  <title>店主の音源 - 詳細</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -38,17 +38,24 @@
       margin: 0 auto 20px;
       border-radius: 6px;
     }
-    .download-btn {
+    .download-btn, .video-btn {
       display: inline-block;
-      background: #ffff00;
-      color: #000;
       padding: 12px 28px;
       text-decoration: none;
       font-weight: bold;
       border-radius: 4px;
-      margin-top: 10px;
+      margin: 8px 8px 0 0;
+    }
+    .download-btn {
+      background: #ffff00;
+      color: #000;
     }
     .download-btn:hover { background: #fff; }
+    .video-btn {
+      background: #ff4444;
+      color: #fff;
+    }
+    .video-btn:hover { background: #ff6666; }
     audio { width: 100%; margin-top: 10px; }
     ul { padding-left: 1.4em; }
     li { margin-bottom: 6px; }
@@ -59,32 +66,37 @@
     <a href="index.html" class="back">← 店に戻る</a>
 
     <div class="card">
-      <img src="images/stand-soul1.png" alt="魂1の立ち絵" class="tachi">
-      <h1>石音アヤ</h1>
-      <p>性別が無い鳥の子。空を飛べる。</p>
+      <img src="images/stand-shopkeeper.png" alt="店主の立ち絵" class="tachi">
+      <h1>妖火クロ</h1>
+      <p>宵狐堂の店主。マイペース。</p>
     </div>
 
     <div class="card">
       <h2>試聴</h2>
-      <audio controls src="samples/soul1-demo.mp3">
+      <audio controls src="samples/shopkeeper-demo.mp3">
         お使いのブラウザは音声再生に対応していません。
       </audio>
     </div>
 
     <div class="card">
-      <h2>ダウンロード</h2>
+      <h2>ダウンロード・配布動画</h2>
       <p>利用規約を確認の上、ご利用ください。</p>
-      <a href="https://www.dropbox.com/scl/fi/8hocbmlvi0zhhg3a3nbc5/.zip?rlkey=tdf1mtx64i7rfgdurhag0d7ps&st=yel9v7oo&dl=1" class="download-btn" target="_blank" rel="noopener">
+      <a href="https://www.dropbox.com/scl/fi/y4wu1rs2gu0re0cya1hs0/.zip?rlkey=u0ce9cgwadjxba7q49vmpx2ko&st=1z668yh6&dl=1
+" class="download-btn" target="_blank" rel="noopener">
         最新版をダウンロード
+      </a>
+      <!-- ↓ ここを実際の配布動画URLに書き換えてください -->
+      <a href="https://www.nicovideo.jp/watch/smXXXXXXXX" class="video-btn" target="_blank" rel="noopener">
+        配布動画を見る
       </a>
     </div>
 
     <div class="card">
       <h2>音源情報</h2>
       <ul>
-        <li>形式：単独音</li>
-        <li>音階：E4</li>
-        <li>推奨エンジン：moresampler</li>
+        <li>形式：連続音</li>
+        <li>音階：C3</li>
+        <li>推奨エンジン：-</li>
       </ul>
     </div>
   </div>
