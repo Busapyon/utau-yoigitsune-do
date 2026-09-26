@@ -188,10 +188,10 @@ body {
 @media (max-width: 768px) {
   /* 店主：さらに大きく・もっと下へ */
   .shopkeeper-area {
-    bottom: -85vh;
+    bottom: -105vh;
   }
   .shopkeeper-gif {
-    height: 280vh;
+    height: 300vh;
     max-width: 200vw;
   }
 
