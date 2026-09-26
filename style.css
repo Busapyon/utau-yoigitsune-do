@@ -24,17 +24,18 @@ body {
 /* 背景 */
 .shop-bg {
   position: absolute;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   z-index: 1;
 }
 
-/* 店主エリア */
+/* 店主 */
 .shopkeeper-area {
   position: absolute;
   left: 50%;
-  bottom: -18vh;
+  bottom: -12vh;
   transform: translateX(-50%);
   cursor: pointer;
   z-index: 10;
@@ -42,97 +43,84 @@ body {
 }
 
 .shopkeeper-area:hover {
-  filter: brightness(1.15);
+  filter: brightness(1.12);
 }
 
-/* 店主GIF */
 .shopkeeper-gif {
-  height: 140vh;
+  height: 135vh;
   width: auto;
-  max-width: 120vw;
+  max-width: none;
   display: block;
   pointer-events: none;
   object-fit: contain;
 }
 
-/* 商品・魂 共通 */
+/* 商品・魂 */
 .item {
   position: absolute;
   cursor: pointer;
   z-index: 15;
   text-align: center;
-  transition: filter 0.25s;
+  transition: filter 0.2s;
 }
 
 .item:hover {
-  filter: brightness(1.25);
+  filter: brightness(1.2);
 }
 
-/* 商品（水晶） */
 .product img {
-  max-width: 320px;
+  width: 22vw;
+  max-width: 280px;
   height: auto;
   pointer-events: none;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 10px rgba(0,0,0,0.45));
 }
 
-/* 魂 */
 .soul img {
-  max-width: 190px;
+  width: 12vw;
+  max-width: 160px;
   height: auto;
   pointer-events: none;
-  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
 }
 
-.item-label {
-  margin-top: 4px;
-  font-size: 12px;
-  color: #fff;
-  text-shadow: 1px 1px 2px #000;
-  background: rgba(0,0,0,0.5);
-  padding: 2px 8px;
-  border-radius: 4px;
-  display: inline-block;
-}
-
-/* PC：水晶の位置 */
+/* PC位置 */
 .product {
-  left: 68%;
-  bottom: -15%;
+  left: 70%;
+  bottom: 2%;
 }
 
-/* 浮かぶ魂 */
 .soul {
   animation: float 3.5s ease-in-out infinite;
 }
 
 .soul1 {
-  left: 6%;
-  top: 28%;
+  left: 8%;
+  top: 26%;
   animation-delay: 0s;
 }
 
 .soul2 {
-  left: 72%;
-  top: 16%;
-  animation-delay: 1.2s;
+  left: 74%;
+  top: 14%;
+  animation-delay: 1.1s;
 }
 
 @keyframes float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
+  50% { transform: translateY(-14px); }
 }
 
 /* 台詞ボックス */
 .dialogue-box {
   position: fixed;
-  bottom: 30px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   width: min(700px, 92vw);
   background: #000;
   border: 4px solid #fff;
-  padding: 20px 24px;
+  padding: 18px 22px;
   z-index: 100;
   display: none;
   box-shadow: 0 0 0 2px #000;
@@ -140,14 +128,14 @@ body {
 
 .dialogue-text {
   color: #fff;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.6;
-  min-height: 60px;
+  min-height: 52px;
   white-space: pre-wrap;
 }
 
 .choices {
-  margin-top: 16px;
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -157,12 +145,11 @@ body {
   background: transparent;
   border: none;
   color: #fff;
-  font-size: 18px;
+  font-size: 17px;
   font-family: inherit;
   text-align: left;
   cursor: pointer;
   padding: 4px 0;
-  transition: color 0.15s;
 }
 
 .choice-btn:hover {
@@ -171,10 +158,10 @@ body {
 
 .continue-hint {
   position: absolute;
-  right: 16px;
-  bottom: 10px;
+  right: 14px;
+  bottom: 8px;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   animation: blink 1s infinite;
   display: none;
 }
@@ -184,43 +171,54 @@ body {
   50% { opacity: 0; }
 }
 
-/* ===== スマホ調整 ===== */
+/* ========== スマホ専用 ========== */
 @media (max-width: 768px) {
-  /* 店主：さらに大きく・もっと下へ */
+  /* 店主：幅で大きく、机が下に来るように */
   .shopkeeper-area {
-    bottom: -200vh;
-  }
-  .shopkeeper-gif {
-    height: 500vh;
-    max-width: 200vw;
+    left: 50%;
+    bottom: -6%;
+    transform: translateX(-50%);
+    width: 175%;          /* ここがサイズの本体 */
   }
 
-  /* 水晶：大きく・下へ */
-  .product img {
-    max-width: 300px;
+  .shopkeeper-gif {
+    width: 100%;
+    height: auto;         /* vh指定をやめる */
+    max-width: none;
   }
+
+  /* 水晶：机の上 */
   .product {
-    left: 55%;
-    bottom: -8%;
+    left: 62%;
+    bottom: 7%;
+  }
+  .product img {
+    width: 34vw;
+    max-width: none;
   }
 
   /* 魂 */
   .soul1 {
-    left: 2%;
-    top: 18%;
+    left: 4%;
+    top: 16%;
   }
   .soul2 {
-    left: 68%;
-    top: 8%;
+    left: 72%;
+    top: 10%;
   }
   .soul img {
-    max-width: 130px;
+    width: 18vw;
+    max-width: none;
   }
 
+  .dialogue-box {
+    bottom: 16px;
+    padding: 14px 16px;
+  }
   .dialogue-text {
-    font-size: 16px;
+    font-size: 15px;
   }
   .choice-btn {
-    font-size: 16px;
+    font-size: 15px;
   }
 }
