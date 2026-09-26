@@ -190,7 +190,7 @@ body {
   /* 水晶 約3倍・机付近 */
   .product {
     left: 58%;
-    bottom: 4%;
+    bottom: -10%;
   }
   .product img {
     width: 55vw;
