@@ -84,10 +84,10 @@ body {
   filter: drop-shadow(0 4px 8px rgba(0,0,0,0.4));
 }
 
-/* PC位置 */
+/* PC：水晶を少し下へ */
 .product {
   left: 70%;
-  bottom: 2%;
+  bottom: -2%;
 }
 
 .soul {
@@ -171,48 +171,48 @@ body {
   50% { opacity: 0; }
 }
 
-/* ========== スマホ専用 ========== */
+/* ========== スマホ：約3倍 ========== */
 @media (max-width: 768px) {
-  /* 店主：幅で大きく、机が下に来るように */
+  /* 店主 約3倍 */
   .shopkeeper-area {
     left: 50%;
-    bottom: -6%;
+    bottom: -18%;
     transform: translateX(-50%);
-    width: 175%;          /* ここがサイズの本体 */
+    width: 320%;
   }
 
   .shopkeeper-gif {
     width: 100%;
-    height: auto;         /* vh指定をやめる */
+    height: auto;
     max-width: none;
   }
 
-  /* 水晶：机の上 */
+  /* 水晶 約3倍・机付近 */
   .product {
-    left: 62%;
-    bottom: 0%;
+    left: 58%;
+    bottom: 4%;
   }
   .product img {
-    width: 34vw;
+    width: 55vw;
     max-width: none;
   }
 
-  /* 魂 */
+  /* 魂 約3倍 */
   .soul1 {
-    left: 4%;
-    top: 16%;
+    left: 0%;
+    top: 12%;
   }
   .soul2 {
-    left: 72%;
-    top: 10%;
+    left: 68%;
+    top: 6%;
   }
   .soul img {
-    width: 18vw;
+    width: 42vw;
     max-width: none;
   }
 
   .dialogue-box {
-    bottom: 16px;
+    bottom: 14px;
     padding: 14px 16px;
   }
   .dialogue-text {
