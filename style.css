@@ -176,7 +176,7 @@ body {
   /* 店主 約3倍 */
   .shopkeeper-area {
     left: 50%;
-    bottom: -18%;
+    bottom: -0%;
     transform: translateX(-50%);
     width: 320%;
   }
@@ -199,7 +199,7 @@ body {
 
   /* 魂 約3倍 */
   .soul1 {
-    left: 0%;
+    left: -8%;
     top: 12%;
   }
   .soul2 {
